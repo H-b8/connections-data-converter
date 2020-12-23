@@ -10,7 +10,7 @@ As the pro-sex community continues to be deplatformed from popular social media,
 5. In this folder, open the file named <b>connections.json</b>
 6. CMD/CTRL+A and COPY the text in this file
 7. PASTE text into text area of application
-8. Submit, and voila!
+8. Hit <b>VIEW CONNECTIONS</b>, and voila!
 
 ### CURRENT FUNCTIONALITY
 
