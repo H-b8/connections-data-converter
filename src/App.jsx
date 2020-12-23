@@ -9,6 +9,7 @@ const App = () => {
 	const [showFollowers, setShowFollowers] = useState(true);
 	const [showFollowing, setShowFollowing] = useState(false);
 	const [showMutuals, setShowMutuals] = useState(false);
+	const [showInvalidText, setShowInvalidText] = useState(false);
 
 	const handleShowFollowers = () => {
 		setShowFollowing(false);
@@ -37,12 +38,19 @@ const App = () => {
 	const scrollToResults = () => scrollToRef(resultsRef);
 
 	const onSubmit = jsonPaste => {
-		let tempString = Object.values(jsonPaste)[0]
-		let connections = JSON.parse(tempString)
-		setFollowers(Object.keys(connections.followers));
-		setFollowing(Object.keys(connections.following));
-		setHasConnections(true);
-		scrollToResults();
+		try {
+			let tempString = Object.values(jsonPaste)[0];
+			let connections = JSON.parse(tempString);
+			setFollowers(Object.keys(connections.followers));
+			setFollowing(Object.keys(connections.following));
+			setHasConnections(true);
+			scrollToResults();
+
+		} catch (e) {
+			console.log("INVALID!!")
+			setShowInvalidText(true);
+			return;
+		}
 	};
 
 	let mutuals = [];
@@ -72,8 +80,12 @@ const App = () => {
 						ref={register}
 					/>
 					<button id="white-button" type="submit">VIEW CONNECTIONS</button>
-
 				</form>
+				<div style={{height: '1rem', marginTop: '1rem'}}>
+					{showInvalidText &&
+						<p style={{color: 'red'}}>INVALID TEXT, PLEASE TRY AGAIN.</p>
+					}
+				</div>
 			</div>
 
 			{hasConnections &&
