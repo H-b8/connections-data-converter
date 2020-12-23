@@ -1,6 +1,8 @@
 
 As the pro-sex community continues to be deplatformed from popular social media, many have began downloading their account data, only to be overwhelmed by a compressed JSON file. Something that is almost useless and unreadable to a non-developer. This web application solves this issue by instructing users on how to access the correct files, and transform that big, scary block of text into a clean readable list of their followers, following, and mutuals.
 
+## <a href="https://h-b8.github.io/connections-data-converter/">CLICK TO LAUNCH APPLICATION!</a>
+
 ### INSTRUCTIONS
 
 1. If you haven't already downloaded your IG data, go to your profile and open <b>Settings</b> and then <b>Security</b>. Under <b>Data and History</b>, click <b>Download Data</b> and follow the instructions
