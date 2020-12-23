@@ -3,13 +3,16 @@ import { useForm } from 'react-hook-form';
 import './index.css';
 
 const App = () => {
-	const [hasConnections, setHasConnections] = useState(false);
+
 	const [followers, setFollowers] = useState();
 	const [following, setFollowing] = useState();
+	const [hasConnections, setHasConnections] = useState(false);
 	const [showFollowers, setShowFollowers] = useState(true);
 	const [showFollowing, setShowFollowing] = useState(false);
 	const [showMutuals, setShowMutuals] = useState(false);
-	const [showInvalidText, setShowInvalidText] = useState(false);
+	const [showInvalid, setShowInvalid] = useState(false);
+
+	const { register, handleSubmit } = useForm();
 
 	const handleShowFollowers = () => {
 		setShowFollowing(false);
@@ -28,8 +31,17 @@ const App = () => {
 		setShowFollowing(false);
 		setShowMutuals(true);
 	}
-
-	const { register, handleSubmit } = useForm();
+	
+	let mutuals = [];
+	const handleMutual = username => {
+		const mutual = followers.find(element => element === username);
+		if (mutual) {
+			mutuals.push(username)
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	const scrollToRef = (ref) => {
 		window.scrollTo(0, ref.current.offsetTop);
@@ -43,34 +55,24 @@ const App = () => {
 			let connections = JSON.parse(tempString);
 			setFollowers(Object.keys(connections.followers));
 			setFollowing(Object.keys(connections.following));
+			following.map(user => handleMutual(user));
 			setHasConnections(true);
 			scrollToResults();
 
 		} catch (e) {
-			console.log("INVALID!!")
-			setShowInvalidText(true);
+			setShowInvalid(true);
 			return;
 		}
 	};
 
-	let mutuals = [];
-	const handleMutual = userHandle => {
-		const mutual = followers.find(element => element === userHandle);
-		if (mutual) {
-			mutuals.push(userHandle)
-			return true;
-		} else {
-			return false;
-		}
-	}
 
-	if (following) following.map(user => handleMutual(user));
+	// if (following) following.map(user => handleMutual(user));
 
 
 	return (
 		<>
 			<div id="submission">
-				<p id="header-text"><b>STEP 1:</b> Download // <b>STEP 2:</b> Unzip and open the folder with "part_1" at the end // <b>STEP 3:</b> Open the file "connections.json"</p>
+				<p id="header-text"><b>STEP 1:</b> Download data // <b>STEP 2:</b> Unzip and open folder with "part_1" at the end // <b>STEP 3:</b> Open the file "connections.json"</p>
 				<header>HELLO WORLD!</header>
 				<form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 					<textarea
@@ -82,8 +84,12 @@ const App = () => {
 					<button id="white-button" type="submit">VIEW CONNECTIONS</button>
 				</form>
 				<div style={{height: '1rem', marginTop: '1rem'}}>
-					{showInvalidText &&
-						<p style={{color: 'red'}}>INVALID TEXT, PLEASE TRY AGAIN.</p>
+					{showInvalid &&
+						<p>
+							<a href="http://github.com/h-b8/connections-data-converter/" target="_blank" rel="noopener noreferrer" style={{color: 'red'}}>
+								INVALID TEXT, PLEASE TRY AGAIN OR CLICK HERE FOR HELP.
+							</a>
+						</p>
 					}
 				</div>
 			</div>

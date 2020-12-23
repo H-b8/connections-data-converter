@@ -5,7 +5,8 @@
 html {
 	scroll-behavior: smooth;
 	max-width: 100%;
-    overflow-x: hidden;
+	overflow-x: hidden;
+	cursor: default;
 }
 
 
@@ -19,7 +20,7 @@ body {
 header {
 	font-family: 'Arial Black';
 	letter-spacing: 2px;
-	font-size: 5rem;
+	font-size: 6.1vw;
 }
 
 h1 {
