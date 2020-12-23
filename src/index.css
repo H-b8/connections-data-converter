@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+	scroll-behavior: smooth;
+	max-width: 100%;
+    overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar, ::-moz-scrollbar {
+    display: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';
+}
+
+header {
+	font-family: 'Arial Black';
+	letter-spacing: 2px;
+	font-size: 5rem;
+}
+
+h1 {
+	font-family: 'Arial Black';
+	letter-spacing: 2px;
+	margin: 0 0 50px 0;
+}
+
+.container {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+	-webkit-column-gap: 150px;
+	-moz-column-gap: 150px;
+	column-gap: 150px;
+	margin-bottom: 50px;
+}
+
+.row-container {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	padding: 0;
+	margin: 0;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}
+
+p {
+	padding-bottom: 10px;
+	margin: 0;
+	display: inline-block;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+button {
+	margin-bottom: 50px;
+	margin-right: 20px;
+	outline: none;
+	height: 40px;
+	padding: 0 50px;
+	border-radius: 50px;
+	background:black;
+	color: white;
+	border: 3px solid black;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.white-button {
+	margin: 0;
+	outline: none;
+	height: 40px;
+	width: calc(50% + 40px);
+	border-radius: 50px;
+	background:white;
+	color: black;
+	border: 3px solid white;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-top: 25px;
+}
+
+#submission {
+	background: black;
+	height: 100vh;
+	color: white;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+#results {
+	margin: 100px;
+	position: relative;
+}
+
+#footer-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#footer-text {
+	justify-content: center;
+}
+
+#paste {
+	padding: 20px;
+	width: 50%;
+	height: 40vh;
+}
+
+#header-text {
+	position: absolute;
+	top: 25px;
 }

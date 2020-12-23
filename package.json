@@ -1,13 +1,15 @@
 {
-  "name": "ig-data-ui",
+  "name": "ig-data-converter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "json-to-js": "^1.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.13.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
