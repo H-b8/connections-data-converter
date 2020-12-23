@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import './index.css';
 import { useForm } from 'react-hook-form';
+import './index.css';
 
 const App = () => {
 	const [hasConnections, setHasConnections] = useState(false);
@@ -62,16 +62,16 @@ const App = () => {
 	return (
 		<>
 			<div id="submission">
-				<p id="header-text"><b>STEP 1:</b> Unzip your data files // <b>STEP 2:</b> Open the folder with "part_1" at the end // <b>STEP 3:</b> Open the file "connections.json"</p>
+				<p id="header-text"><b>STEP 1:</b> Download // <b>STEP 2:</b> Unzip and open the folder with "part_1" at the end // <b>STEP 3:</b> Open the file "connections.json"</p>
 				<header>HELLO WORLD!</header>
 				<form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 					<textarea
 						id="paste"
-						placeholder="STEP 4: PASTE THE TEXT FROM YOUR CONNECTIONS.JSON FILE HERE"
+						placeholder="STEP 4: COPY+PASTE THE TEXT FROM YOUR CONNECTIONS.JSON FILE HERE"
 						name="jsonPaste"
 						ref={register}
 					/>
-					<button class="white-button" type="submit">VIEW CONNECTIONS</button>
+					<button id="white-button" type="submit">VIEW CONNECTIONS</button>
 
 				</form>
 			</div>

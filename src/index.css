@@ -1,12 +1,13 @@
+::-webkit-scrollbar, ::-moz-scrollbar {
+	display: none;
+}
+
 html {
 	scroll-behavior: smooth;
 	max-width: 100%;
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar, ::-moz-scrollbar {
-    display: none;
-}
 
 body {
 	margin: 0;
@@ -24,25 +25,8 @@ header {
 h1 {
 	font-family: 'Arial Black';
 	letter-spacing: 2px;
-	/* margin: 0 0 50px 0; */
 }
 
-.container {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	column-count: 4;
-	-webkit-column-gap: 150px;
-	-moz-column-gap: 150px;
-	column-gap: 150px;
-	margin-bottom: 50px;
-}
-
-.row-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-bottom: 25px;
-}
 
 a {
 	text-decoration: none;
@@ -51,7 +35,6 @@ a {
 	margin: 0;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-
 }
 
 p {
@@ -77,20 +60,16 @@ button {
 	cursor: pointer;
 }
 
-.white-button {
-	margin: 0;
-	outline: none;
-	height: 40px;
-	width: calc(50% + 40px);
-	border-radius: 50px;
-	background:white;
-	color: black;
-	border: 3px solid white;
-	letter-spacing: 1px;
-	font-weight: 600;
-	cursor: pointer;
-	margin-top: 25px;
+.container {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+	-webkit-column-gap: 150px;
+	-moz-column-gap: 150px;
+	column-gap: 150px;
+	margin-bottom: 50px;
 }
+
 
 #submission {
 	background: black;
@@ -105,6 +84,32 @@ button {
 	padding: 0;
 }
 
+#header-text {
+	position: absolute;
+	top: 25px;
+}
+
+#paste {
+	padding: 20px;
+	width: 50%;
+	height: 40vh;
+}
+
+#white-button {
+	margin: 0;
+	outline: none;
+	height: 40px;
+	width: calc(50% + 40px);
+	border-radius: 50px;
+	background:white;
+	color: black;
+	border: 3px solid white;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-top: 25px;
+}
+
 #results {
 	margin: 100px;
 	position: relative;
@@ -117,15 +122,4 @@ button {
 }
 #footer-text {
 	justify-content: center;
-}
-
-#paste {
-	padding: 20px;
-	width: 50%;
-	height: 40vh;
-}
-
-#header-text {
-	position: absolute;
-	top: 25px;
 }
