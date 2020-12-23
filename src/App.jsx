@@ -81,7 +81,7 @@ const App = () => {
 					<div ref={resultsRef} />
 					<div id="results">
 
-						<h1>HAVE A NICE DAY! I LOVE YOU :^)</h1>
+						<h1>I LOVE YOU, HAVE A NICE DAY!</h1>
 
 						<button onClick={() => handleShowFollowers()}>FOLLOWERS ({followers.length})</button>
 						<button onClick={() => handleShowFollowing()}>FOLLOWING ({following.length})</button>
@@ -120,7 +120,7 @@ const App = () => {
 					</div>
 
 					<div id="footer-div">
-						<a href="http://instagram.com/___hellbait___" id="footer-text" target="_blank" rel="noopener noreferrer">
+						<a href="http://github.com/h-b8/" id="footer-text" target="_blank" rel="noopener noreferrer">
 							<p>MADE BY BAITES</p>
 						</a>
 					</div>
