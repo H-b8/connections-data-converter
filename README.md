@@ -8,7 +8,7 @@ As the pro-sex community continues to be deplatformed from popular social media,
 3. Unzip your files
 4. Open the folder that has <b>part_1</b> at the end of its name
 5. In this folder, open the file named <b>connections.json</b>
-6. CMD/CTRL+A to select all, and COPY the text in this files
+6. CMD/CTRL+A and COPY the text in this file
 7. PASTE text into text area of application
 8. Submit, and voila!
 
