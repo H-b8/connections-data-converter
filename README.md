@@ -1,5 +1,5 @@
 
-As the pro-sex community continues to be deplatformed from popular social media, many have began downloading their account data, only to be overwhelmed by a compressed JSON file. Something that is almost useless and unreadable to a non-developer. This web application solves this issue by instructing users on how to access the correct files, and transform that big, scary block of text into a clean readable list of their followers, following, and mutuals.
+As the pro-sex community continues to be deplatformed from popular social media, many have began downloading their account data, only to be overwhelmed by a compressed JSON file. Something that is almost useless and unreadable to a non-developer. This web application solves the issue by instructing users on how to access the correct files, and transform that big, scary block of text into a clean readable list of their followers, following, and mutuals.
 
 ## <a href="https://h-b8.github.io/connections-data-converter/">CLICK TO LAUNCH APPLICATION!</a>
 
