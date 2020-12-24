@@ -43,6 +43,8 @@ const App = () => {
 		}
 	}
 
+	if (following) following.map(user => handleMutual(user));
+
 	const scrollToRef = (ref) => {
 		window.scrollTo(0, ref.current.offsetTop);
 	}
@@ -50,23 +52,21 @@ const App = () => {
 	const scrollToResults = () => scrollToRef(resultsRef);
 
 	const onSubmit = jsonPaste => {
-		try {
-			let tempString = Object.values(jsonPaste)[0];
-			let connections = JSON.parse(tempString);
-			setFollowers(Object.keys(connections.followers));
-			setFollowing(Object.keys(connections.following));
-			following.map(user => handleMutual(user));
-			setHasConnections(true);
-			scrollToResults();
+		let connections;
+		let tempString = Object.values(jsonPaste)[0];
 
+		try {
+			connections = JSON.parse(tempString);
 		} catch (e) {
 			setShowInvalid(true);
 			return;
 		}
+
+		setFollowers(Object.keys(connections.followers));
+		setFollowing(Object.keys(connections.following));
+		setHasConnections(true);
+		scrollToResults();
 	};
-
-
-	// if (following) following.map(user => handleMutual(user));
 
 
 	return (
