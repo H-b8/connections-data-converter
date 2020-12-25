@@ -1,5 +1,11 @@
 
-As the pro-sex community continues to be deplatformed from popular social media, many have began downloading their account data, only to be overwhelmed by a compressed JSON file. Something that is almost useless and unreadable to a non-developer. This web application solves the issue by instructing users on how to access the correct files, and transform that big, scary block of text into a clean readable list of their followers, following, and mutuals.
+As social media guidelines become more and more strict, many fear being deplatformed and losing contact with their community, friends, fans, and clients. In response to this, many have began downloading their Instagram data in preparation for the the app's new Community Guidelines. This data is crucial when one is deplatformed and needs to reconnect with their community and rebuild their audience. 
+
+But here's the problem — Upon opening these data files, a user is met with a large compressed JSON file. Something quite overwhelming (and seemingly useless) to someone who doesn't know how read it. 
+
+To solve this issue, I've created a browser application where a user can paste in the text from their connections.json file to receive an organized list of their followers, following, and mutuals. All list items are links to allow easy reconnection when one is logged into IG via browser. (Save and export functionality coming soon!!)
+
+This isn't the first application I've created with sex workers, educators, and artists in mind. And in the age of FOSTA-SESTA, the EARN IT Act, and SISEA, it definitely won't be my last.
 
 ## <a href="https://h-b8.github.io/connections-data-converter/">CLICK TO LAUNCH APPLICATION!</a>
 
