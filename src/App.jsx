@@ -89,11 +89,7 @@ const App = () => {
 				</form>
 				<div style={{ height: '1rem', marginTop: '1rem' }}>
 					{showInvalid &&
-						<p>
-							<a href="http://github.com/h-b8/connections-data-converter/" target="_blank" rel="noopener noreferrer" style={{ color: 'red' }}>
-								INVALID TEXT, PLEASE TRY AGAIN.
-							</a>
-						</p>
+						<p style={{ color: 'red' }}>INVALID TEXT, PLEASE TRY AGAIN.</p>
 					}
 				</div>
 				<div onClick={() => handleShowInstructions()} style={{cursor: 'pointer'}}>
@@ -160,7 +156,7 @@ const App = () => {
 					</div>
 
 					<div className="footer-div">
-						<a href="http://github.com/h-b8/" className="footer-text" target="_blank" rel="noopener noreferrer">
+						<a href="http://h-b8.github.io/connections-data-converter" className="footer-text" target="_blank" rel="noopener noreferrer">
 							<p>MADE BY BAITES</p>
 						</a>
 					</div>
