@@ -89,6 +89,7 @@ button {
 	position: absolute;
 	top: 25px;
 	text-align: center;
+	font-size: 1vw;
 }
 
 #paste {
@@ -118,11 +119,33 @@ button {
 	position: relative;
 }
 
-#footer-div {
+.footer-div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-#footer-text {
+.footer-text {
 	justify-content: center;
+}
+
+.help-div {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	border-radius: 50%;
+	z-index: 5;
+}
+
+.instructions {
+	position: absolute;
+	bottom: 50px;
+	right: 20px;
+	width: 20%;
+	text-align: justify;
 }
