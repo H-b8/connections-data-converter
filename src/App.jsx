@@ -156,7 +156,7 @@ const App = () => {
 					</div>
 
 					<div className="footer-div">
-						<a href="http://h-b8.github.io/connections-data-converter" className="footer-text" target="_blank" rel="noopener noreferrer">
+						<a href="http://github.com/h-b8" className="footer-text" target="_blank" rel="noopener noreferrer">
 							<p>MADE BY BAITES</p>
 						</a>
 					</div>
