@@ -15,10 +15,6 @@ const App = () => {
 
 	const { register, handleSubmit } = useForm();
 
-	const handleShowInstructions = () => {
-		setShowInstructions(true);
-	}
-
 	const handleShowFollowers = () => {
 		setShowFollowing(false);
 		setShowMutuals(false);
@@ -92,7 +88,7 @@ const App = () => {
 						<p style={{ color: 'red' }}>INVALID TEXT, PLEASE TRY AGAIN.</p>
 					}
 				</div>
-				<div onClick={() => handleShowInstructions()} style={{cursor: 'pointer'}}>
+				<div onClick={() => setShowInstructions(!showInstructions)} style={{cursor: 'pointer'}}>
 					<div className="help-div">
 						?
 					</div>
