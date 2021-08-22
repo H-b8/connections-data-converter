@@ -47,6 +47,13 @@ p {
 	text-transform: uppercase;
 }
 
+.ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 250px;
+}
+
 button {
 	margin-bottom: 50px;
 	margin-right: 20px;

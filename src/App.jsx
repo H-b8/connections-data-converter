@@ -128,7 +128,7 @@ const App = () => {
 								{followers.map(user => {
 									return (
 										<a href={`http://instagram.com/${user}`} target="_blank" rel="noopener noreferrer">
-											<p>{user}</p><br />
+											<p className="ellipsis">{user}</p><br />
 										</a>
 									);
 								})}
@@ -141,12 +141,12 @@ const App = () => {
 									<>
 										{showMutuals && handleMutual(user) &&
 											<a href={`http://instagram.com/${user}`} target="_blank" rel="noopener noreferrer">
-												<p>{user}</p><br />
+												<p className="ellipsis">{user}</p><br />
 											</a>
 										}
 										{showFollowing &&
 											<a href={`http://instagram.com/${user}`} target="_blank" rel="noopener noreferrer">
-												<p>{user}</p><br />
+												<p className="ellipsis">{user}</p><br />
 											</a>
 										}
 									</>
