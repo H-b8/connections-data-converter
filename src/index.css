@@ -32,13 +32,13 @@ body {
 }
 
 header {
-	font-family: 'Arial-Black';
+	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
 	letter-spacing: 2px;
 	font-size: 6.1vw;
 }
 
 h1 {
-	font-family: 'Arial-Black';
+	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
 	letter-spacing: 2px;
 }
 
