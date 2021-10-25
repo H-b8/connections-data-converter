@@ -1,3 +1,15 @@
+@font-face {
+	src: url('./fonts/ArialBlack/Arial-Black.eot');
+	src: url('./fonts/ArialBlack/Arial-Black.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/ArialBlack/Arial-Black.woff2') format('woff2'),
+		url('./fonts/ArialBlack/Arial-Black.woff') format('woff'),
+		url('./fonts/ArialBlack/Arial-Black.ttf') format('truetype'),
+		url('./fonts/ArialBlack/Arial-Black.svg#Arial-Black') format('svg');
+	font-family: Arial-Black;
+	font-style: normal;
+	font-weight: 900;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -20,13 +32,13 @@ body {
 }
 
 header {
-	font-family: 'Arial Black';
+	font-family: 'Arial-Black';
 	letter-spacing: 2px;
 	font-size: 6.1vw;
 }
 
 h1 {
-	font-family: 'Arial Black';
+	font-family: 'Arial-Black';
 	letter-spacing: 2px;
 }
 

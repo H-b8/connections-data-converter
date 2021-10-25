@@ -1,6 +1,6 @@
 {
   "homepage": "https://h-b8.github.io/connections-data-converter/",
-  "name": "ig-data-converter",
+  "name": "connections-data-converter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
