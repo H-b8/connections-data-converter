@@ -37,7 +37,7 @@ body {
 	box-sizing: border-box;
 }
 
-#submission-container {
+.submission-container {
 	background: black;
 	height: 100vh;
 	width: 100%;
@@ -47,14 +47,11 @@ body {
 	align-items: center;
 }
 
-#form-container {
+.form-container {
 	width: 50%;
-	/* display: flex;
-	flex-direction: column;
-	align-items: center; */
 }
 
-#header-container {
+.header-container {
 	text-align: justify;
 	width: 100%;
 	display: flex;
@@ -81,13 +78,19 @@ textarea {
 	height: 40px;
 	width: 100%;
 	border-radius: 50px;
-	background: white;
+	background-color: white;
 	color: black;
-	/* border: 3px solid white; */
+	border: 3px solid white;
 	letter-spacing: 1px;
 	font-weight: 600;
 	cursor: pointer;
 	margin-top: 25px;
+	transition: 0.5s ease-in-out;
+}
+
+.white-button:hover {
+	background-color: black;
+	color: white;
 }
 
 .error-msg {
@@ -97,6 +100,40 @@ textarea {
 	justify-content: center;
 	height: 20px;
 }
+
+.tool-tip {
+	color: white;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	border-radius: 50%;
+	z-index: 5;
+	cursor: pointer;
+}
+
+.instructions {
+	color: white;
+	position: absolute;
+	bottom: 50px;
+	right: 20px;
+	width: 20%;
+	text-align: justify;
+}
+
+.instructions > li {
+	margin-bottom: 20px;
+}
+
+
+
+
+
 
 h1 {
 	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
@@ -174,31 +211,3 @@ button {
 	justify-content: center;
 }
 
-.tool-tip {
-	color: white;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	width: 25px;
-	height: 25px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid white;
-	border-radius: 50%;
-	z-index: 5;
-	cursor: pointer;
-}
-
-.instructions {
-	color: white;
-	position: absolute;
-	bottom: 50px;
-	right: 20px;
-	width: 20%;
-	text-align: justify;
-}
-
-.instructions > li {
-	margin-bottom: 20px;
-}

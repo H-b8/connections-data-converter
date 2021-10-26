@@ -72,9 +72,9 @@ const App = () => {
 
 	return (
 		<>
-			<section id="submission-container">
-				<div id="form-container">
-					<div id="header-container">
+			<section className="submission-container">
+				<div className="form-container">
+					<div className="header-container">
 						<header>HELLO</header>
 						<header>WORLD!</header>
 					</div>
