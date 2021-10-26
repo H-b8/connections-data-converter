@@ -52,17 +52,16 @@ body {
 }
 
 .header-container {
-	text-align: justify;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
 
 header {
-	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
 	color: white;
-	letter-spacing: 2px;
+	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
 	font-size: 5.5vw;
+	letter-spacing: 2px;
 }
 
 textarea {
@@ -73,18 +72,17 @@ textarea {
 }
 
 .white-button {
-	margin: 0;
+	margin: 25px 0 0 0;
 	outline: none;
+	border: 3px solid white;
+	border-radius: 50px;
 	height: 40px;
 	width: 100%;
-	border-radius: 50px;
 	background-color: white;
 	color: black;
-	border: 3px solid white;
-	letter-spacing: 1px;
 	font-weight: 600;
+	letter-spacing: 1px;
 	cursor: pointer;
-	margin-top: 25px;
 	transition: 0.5s ease-in-out;
 }
 
