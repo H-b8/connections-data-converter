@@ -72,41 +72,47 @@ const App = () => {
 
 	return (
 		<>
-			<div id="submission">
-				<header>HELLO WORLD!</header>
-				<form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-					<textarea
-						id="paste"
-						placeholder="PASTE YOUR 'CONNECTIONS.JSON' FILE'S TEXT HERE"
-						name="jsonPaste"
-						ref={register}
-					/>
-					<button id="white-button" type="submit">VIEW CONNECTIONS</button>
-				</form>
-				<div style={{ height: '1rem', marginTop: '1rem' }}>
-					{showInvalid &&
-						<p style={{ color: 'red' }}>INVALID TEXT, PLEASE TRY AGAIN.</p>
-					}
-				</div>
-				<div onClick={() => setShowInstructions(!showInstructions)} style={{cursor: 'pointer'}}>
-					<div className="help-div">
-						?
+			<section id="submission-container">
+				<div id="form-container">
+					<div id="header-container">
+						<header>HELLO</header>
+						<header>WORLD!</header>
 					</div>
-				</div>
-				{showInstructions &&
-					<div className="instructions">
-						1. If you haven't already downloaded your IG data, go to your profile and open <b>Settings</b> and then <b>Security</b>. Under <b>Data and History</b>, click <b>Download Data</b> and follow the instructions<br/><br/>
-						2. When receiving your email confirmation, follow instructions on downloading your data files to your computer<br/><br/>
-						3. Unzip your files<br/><br/>
-						4. Open the folder that has <b>part_1</b> at the end of its name<br/><br/>
-						5. In this folder, open the file named <b>connections.json</b><br/><br/>
-						6. CMD/CTRL+A and COPY the text in this file<br/><br/>
-						7. PASTE text into text area of application<br/><br/>
-						8. Hit <b>VIEW CONNECTIONS</b>, and voila!<br/><br/>
-					</div>
-				}
 
-			</div>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<textarea
+							className="border-box"
+							placeholder="PASTE YOUR 'CONNECTIONS.JSON' FILE'S TEXT HERE"
+							name="jsonPaste"
+							ref={register}
+						/>
+						<button className="white-button" type="submit">VIEW CONNECTIONS</button>
+					</form>
+
+					<div className="error-msg">
+						{showInvalid &&
+							<p>INVALID TEXT, PLEASE TRY AGAIN.</p>
+						}
+					</div>
+				</div>
+
+				<div onClick={() => setShowInstructions(!showInstructions)} className="tool-tip">
+					?
+				</div>
+
+				{showInstructions &&
+					<ol className="instructions">
+						<li>If you haven't already downloaded your IG data, go to your profile and open <b>Settings</b> and then <b>Security</b>. Under <b>Data and History</b>, click <b>Download Data</b> and follow the instructions</li>
+						<li>When receiving your email confirmation, follow instructions on downloading your data files to your computer</li>
+						<li>Unzip your files</li>
+						<li>Open the folder that has <b>part_1</b> at the end of its name</li>
+						<li>In this folder, open the file named <b>connections.json</b></li>
+						<li>CMD/CTRL+A and COPY the text in this file</li>
+						<li>PASTE text into text area of application</li>
+						<li>Hit <b>VIEW CONNECTIONS</b>, and voila!</li>
+					</ol>
+				}
+			</section>
 
 			{hasConnections &&
 				<>

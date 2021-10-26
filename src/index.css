@@ -1,6 +1,7 @@
 @font-face {
 	src: url('./fonts/ArialBlack/Arial-Black.eot');
-	src: url('./fonts/ArialBlack/Arial-Black.eot?#iefix') format('embedded-opentype'),
+	src: url('./fonts/ArialBlack/Arial-Black.eot?#iefix')
+			format('embedded-opentype'),
 		url('./fonts/ArialBlack/Arial-Black.woff2') format('woff2'),
 		url('./fonts/ArialBlack/Arial-Black.woff') format('woff'),
 		url('./fonts/ArialBlack/Arial-Black.ttf') format('truetype'),
@@ -18,23 +19,83 @@
 }
 
 html {
-	scroll-behavior: smooth;
 	max-width: 100%;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 	cursor: default;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#submission-container {
+	background: black;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#form-container {
+	width: 50%;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+}
+
+#header-container {
+	text-align: justify;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 header {
 	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
+	color: white;
 	letter-spacing: 2px;
-	font-size: 6.1vw;
+	font-size: 5.5vw;
+}
+
+textarea {
+	height: 40vh;
+	width: 100%;
+	padding: 20px;
+	font-size: 1rem;
+}
+
+.white-button {
+	margin: 0;
+	outline: none;
+	height: 40px;
+	width: 100%;
+	border-radius: 50px;
+	background: white;
+	color: black;
+	/* border: 3px solid white; */
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-top: 25px;
+}
+
+.error-msg {
+	color: red;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	height: 20px;
 }
 
 h1 {
@@ -73,7 +134,7 @@ button {
 	height: 40px;
 	padding: 0 50px;
 	border-radius: 50px;
-	background:black;
+	background: black;
 	color: white;
 	border: 3px solid black;
 	letter-spacing: 1px;
@@ -91,19 +152,6 @@ button {
 	margin-bottom: 50px;
 }
 
-#submission {
-	background: black;
-	height: 100vh;
-	color: white;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-}
-
 #header-text {
 	position: absolute;
 	top: 25px;
@@ -111,27 +159,6 @@ button {
 	font-size: 1vw;
 }
 
-#paste {
-	padding: 20px;
-	width: 50%;
-	height: 40vh;
-	font-size: 1rem;
-}
-
-#white-button {
-	margin: 0;
-	outline: none;
-	height: 40px;
-	width: calc(50% + 40px);
-	border-radius: 50px;
-	background:white;
-	color: black;
-	border: 3px solid white;
-	letter-spacing: 1px;
-	font-weight: 600;
-	cursor: pointer;
-	margin-top: 25px;
-}
 
 #results {
 	margin: 100px;
@@ -147,7 +174,8 @@ button {
 	justify-content: center;
 }
 
-.help-div {
+.tool-tip {
+	color: white;
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
@@ -159,12 +187,18 @@ button {
 	border: 1px solid white;
 	border-radius: 50%;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .instructions {
+	color: white;
 	position: absolute;
 	bottom: 50px;
 	right: 20px;
 	width: 20%;
 	text-align: justify;
+}
+
+.instructions > li {
+	margin-bottom: 20px;
 }
