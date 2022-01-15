@@ -128,11 +128,6 @@ textarea {
 	margin-bottom: 20px;
 }
 
-
-
-
-
-
 h1 {
 	font-family: 'Arial-Black', Arial, Helvetica, sans-serif;
 	letter-spacing: 2px;
@@ -194,7 +189,6 @@ button {
 	font-size: 1vw;
 }
 
-
 #results {
 	margin: 100px;
 	position: relative;
@@ -205,6 +199,7 @@ button {
 	justify-content: center;
 	align-items: center;
 }
+
 .footer-text {
 	justify-content: center;
 }
